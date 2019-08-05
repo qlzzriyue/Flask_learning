@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+    <div>
+      {% for post in posts %}
+      <blockquote class="blockquote text-center">
+        <p class="mb-0">{{ post.title }}</p>
+        <footer class="blockquote-footer">{{ post.author }}</footer>
+      </blockquote>
+      <p class="text-center">{{ post.content }}</p><hr>
+      {% endfor %}
+    </div>
+{% endblock %}
